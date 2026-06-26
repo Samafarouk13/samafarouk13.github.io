@@ -1,0 +1,297 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: "Nunito", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #52565b;
+    background-color: #fff;
+}
+:root {
+    --info: #06BBCC;
+    --light: #F0FBFC;
+    --dark: #181d38;
+}
+.wow{
+    visibility: hidden;
+}
+.animated{
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+/* Animations Keyframes */
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+    to {
+        opacity: 1;
+        transform: scale3d(1, 1, 1);
+    }
+}
+.zoomIn {
+    animation-name: zoomIn;
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 40px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+.fadeInUp {
+    animation-name: fadeInUp;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.fadeIn {
+    animation-name: fadeIn;
+}
+/* Navbar */
+.custom-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+}
+.navbar .navbar-brand h2 {
+    color: var(--info);
+    font-weight: 700;
+    line-height: 1.2;
+}
+.navbar .navbar-brand h2 i {
+    color: var(--info);
+    margin-right: 10px;
+}
+.navbar-light .navbar-nav .nav-link {
+    font-size: 15px;
+    position: relative;
+    padding: 0px 15px; 
+    color: var(--dark);
+    font-weight: 500;
+    text-transform: uppercase;
+    outline: none;
+    transition: .5s;
+}
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+    color: var(--info);
+}
+.navbar-light .navbar-nav .dropdown-menu .active{
+    border-radius: 4px;
+}
+.navbar-light .navbar-nav .dropdown-menu .active{
+    background: var(--info);
+}
+.text-custom-info {
+    color: var(--info);
+}
+.btn-custom-info {
+    background-color: var(--info);
+    border-color: var(--info);
+    color: #ffffff;
+    transition: 0.3s ease;
+}
+.btn-custom-info:hover {
+    background-color: #05a3b2;
+    border-color: #05a3b2;
+    color: #ffffff;
+}
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(24, 29, 56, .7), rgba(24, 29, 56, .7)), url(../Photo/carousel-1.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+    color: var(--light);
+}
+.breadcrumb-item a{
+    text-decoration: none;
+}
+/* 404 Page Style */
+.error-icon{
+    font-size: 5rem;
+    color: var(--info);
+    display: block;
+}
+.display-1{
+    color: var(--info);
+}
+.page-title{
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 25px;
+}
+.error-message{
+    font-size: 16px;
+    line-height: 1.6;
+    color: #52565b;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+}
+.btn-custom-info.rounded-pill {
+    border-radius: 50px;
+    background-color: var(--info);
+    border-color: var(--info);
+    font-size: 16px;
+    padding: 15px 45px;
+    transition: 0.3s ease;
+}
+.btn-custom-info.rounded-pill:hover {
+    background-color: #05a3b2;
+    border-color: #05a3b2;
+    color: #ffffff;
+}
+/* Footer */
+.footer .btn.btn-social {
+    margin-right: 5px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light);
+    font-weight: normal;
+    border: 1px solid #FFFFFF;
+    border-radius: 35px;
+    transition: .3s;
+}
+.footer .btn.btn-social:hover {
+    color: var(--info);
+}
+.footer .btn.btn-link {
+    display: block;
+    margin-bottom: 5px;
+    padding: 0;
+    text-align: left;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: normal;
+    text-transform: capitalize;
+    transition: .3s;
+}
+.footer .btn.btn-link:hover {
+    letter-spacing: 1px;
+    box-shadow: none;
+}
+.footer .copyright {
+    padding: 25px 0;
+    font-size: 15px;
+    border-top: 1px solid rgba(256, 256, 256, .1);
+}
+.footer .copyright a {
+    color: var(--light);
+    text-decoration: none;
+}
+.footer .footer-menu a {
+    text-decoration: none;
+    margin-right: 15px;
+    padding-right: 15px;
+    border-right: 1px solid rgba(255, 255, 255, .1);
+}
+.footer .footer-menu a:last-child {
+    margin-right: 0;
+    padding-right: 0;
+    border-right: none;
+}
+/* Button */
+.back-to-top {
+    position: fixed;
+    right: 45px;
+    bottom: 45px;
+    z-index: 99;
+    width: 50px;
+    height: 50px;
+    background-color: var(--info);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.back-to-top i {
+    font-size: 18px;
+    color: #ffffff ;
+}
+/* Media */
+@media (max-width: 992px) {
+.navbar-collapse {
+        flex-basis: 100%;
+        flex-grow: 1;
+        align-items: center;
+}
+.navbar-light .navbar-nav {
+        margin-top: 15px;
+        padding: 15px 0;
+        border-top: 1px solid #0000000d; 
+}
+.navbar-light .navbar-nav .nav-link {
+        padding: 15px 0; 
+        font-family: 'Heebo', sans-serif;
+        font-size: 15px;
+        font-weight: 600;
+        text-transform: uppercase; 
+        color: var(--dark) ;
+        transition: 0.3s ease;
+}
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+        color: var(--info); 
+}
+.navbar-light .navbar-nav .dropdown-menu {
+        box-shadow: none;
+        border: 1px solid #ccc;
+        background: #ffffff; 
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 0; 
+}
+.navbar-light .navbar-nav .dropdown-item {
+        padding: 8px 15px;
+        font-weight: 600;
+        color: var(--dark);
+        transition: 0.2s ease;
+}
+.navbar-light .navbar-nav .dropdown-item:hover,
+.navbar-light .navbar-nav .dropdown-item:focus {
+        background-color: #cccccced; 
+        color: var(--dark) ;
+}
+}
+@media (max-width: 768px) {
+.hero-section .display-3 {
+    font-size: 2.3rem;
+}
+.hero-section p.fs-5 {
+    font-size: 0.95rem;
+}
+.display-1{
+    font-size: 4.7rem;
+}
+.page-title {
+    font-size: 1.85rem; 
+}
+.error-icon {
+    font-size: 70px; 
+}  
+.error-message {
+    font-size: 0.93rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+}
